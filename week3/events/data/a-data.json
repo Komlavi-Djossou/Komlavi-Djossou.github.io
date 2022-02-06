@@ -1,0 +1,47 @@
+{
+    "business" :[
+        {
+            "name": "kdcooperation",
+            "number": "+22891563448",
+            "location": "Souza Netime",
+            "service" : "Web development"
+        },
+        {
+            "name": "Godson Market",
+            "number": "+22870274340",
+            "location": "Amoutive",
+            "service" : "Drugs store"
+        },
+        {
+            "name": "TalentCast Global",
+            "number": "+22890986539",
+            "location": "Tokoin",
+            "service" : "Business and importation"
+        },
+        {
+            "name": "Repins",
+            "number": "+22891563448",
+            "location": "Adidogome",
+            "service" : "Education of kids"
+        },
+        {
+            "name": "JGK",
+            "number": "+22892703448",
+            "location": "Akodessewa",
+            "service" : "Company Implimentation"
+        },
+        {
+            "name": "Manaa Market",
+            "number": "+22893474325",
+            "location": "Zanguera",
+            "service" : "Clothes and Beauty"
+        },
+        {
+            "name": "Astra Business",
+            "number": "+22891567948",
+            "location": "Wuiti",
+            "Service" : "Translation and Interpretation"
+        }
+
+    ]
+}

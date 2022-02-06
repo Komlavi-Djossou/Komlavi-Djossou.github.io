@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function displayContent(){
+            const outPut = document.getElementById("content").value;
+            document.getElementById("readInput").innerHTML = 'You entered :' + outPut;
+        }
+        function displayContent2(){
+            const outPut2 = document.getElementById("content2").value;
+            const outputElement = document.getElementById("readInput2");
+            const outputInt = parseInt(outPut2);
+            if (outputInt !== NaN) {
+                outputElement.innerHTML = "total:" + sum(outputInt);
+            }
+        }
+        function sum(number) {
+            let total = 0;
+            for (let i = 1; i <= number; i++) {
+                total += i;
+            }
+            return total;
+        }
+        
+        function add(number1, number2) {
+            return number1 + number2;
+        }
+      
+        function displayContent3() {
+            const numb1 = document.getElementById('content3').value;
+            const numb2 = document.getElementById('content4').value;
+            const outputElement3 = document.getElementById('readInput3');
+            const num1Float = parseFloat(numb1);
+            const num2Float = parseFloat(numb2);
+            if ((num1Float !== NaN) & (num2Float !== NaN)) {
+            const total = num1Float + num2Float;
+            outputElement3.innerHTML = 'Total: ' + total;
+            }
+        }
+        // stretch
+            const displayContent4 = () => {
+            const numb1 = document.getElementById('content5').value;
+            const numb2 = document.getElementById('content6').value;
+            const outputElement4 = document.getElementById('readInput4');
+            const num1Float = parseFloat(numb1);
+            const num2Float = parseFloat(numb2);
+            if ((num1Float !== NaN) & (num2Float !== NaN)) {
+            const total = num1Float - num2Float;
+            outputElement4.innerHTML = 'Total: ' + total;   
+          }
+        }
+        const displayContent5 = function() {
+            const numb1 = document.getElementById('content7').value;
+            const numb2 = document.getElementById('content8').value;
+            const outputElement5 = document.getElementById('readInput5');
+            const num1Float = parseFloat(numb1);
+            const num2Float = parseFloat(numb2);
+            if ((num1Float !== NaN) & (num2Float !== NaN)) {
+            const total = num1Float * num2Float;
+            outputElement5.innerHTML = 'Total: ' + total; 
+        }
+    }
+        
+    </script>   
+</head>
+<body>
+    <h2>Requirement 1</h2>
+    <input type="text" id="content" name="content">
+        <button onclick="displayContent()">Click</button>
+    <div id="readInput"></div>
+
+      <!-- Requirement 2 -->
+      <h2>Requirement 2</h2>
+      <input type="text" id="content2" name="content">
+      <button onclick="displayContent2()">Sum</button>
+      <div id="readInput2"></div>
+
+     <!-- Requirement 3 -->
+     <h2>Requirement 3</h2>
+    <input id="content3" placeholder="enter a number" type="number"/>
+    <input id="content4" placeholder="enter a number"type="number"/>
+    <button onclick="displayContent3()">+</button>
+    <div id="readInput3"></div>   
+
+    <!-- strech    -->
+    <h2>Subtract</h2>
+    <input id="content5" placeholder="enter a number" type="number"/>
+    <input id="content6" placeholder="enter a number"type="number"/>
+    <button onclick="displayContent4()">-</button>
+    <div id="readInput4"></div> 
+
+    <h2>Multiplication</h2>
+    <input id="content7" placeholder="enter a number" type="number"/>
+    <input id="content8" placeholder="enter a number"type="number"/>
+    <button onclick="displayContent5()">*</button>
+    <div id="readInput5"></div> 
+</body>
+
+</html>

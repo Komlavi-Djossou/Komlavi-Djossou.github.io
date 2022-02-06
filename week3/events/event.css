@@ -1,0 +1,38 @@
+div.cards section,  div.cards-list section {
+    border: 1px solid black;
+    text-align: center;
+    margin: 5px;
+    background-color: hsla(120, 13%, 26%, 0.3);
+}
+.btn-view {
+    width: 30%;
+    border: 1px solid black;
+}
+
+@media screen and (min-width: 900px){
+    div.cards {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+    } 
+    div.cards-list {
+        display: list-item;
+        margin-left: 2rem;
+        list-style: none;
+    }
+}
+
+
+@media screen and (min-width:1200px){
+    div.cards {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+    }
+    div.cards section {
+    display: block;
+    }
+    .btn-view {
+        width: 20%;
+        border: 1px solid black;
+        color: white;
+    }
+}
