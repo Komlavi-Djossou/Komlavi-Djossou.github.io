@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label for="check-box">
+    <input type="checkbox" name="checkbox" id="taskStatus">
+    <b>Wake up in the morning and bush your teeth </b>
+  </label> 
+  
+
+
+  <script>                                  
+    const todoChecking = () => {                                                                
+     let taskChecker = document.getElementById("taskStatus");                        
+      let status = false;                                                        
+       if(taskChecker.checked){ status = true;                                               
+     } else { 
+       status = false;
+       }   
+     if (status) {
+        taskChecker.value = checked; 
+        setTimeout (()=> { 
+        document.querySelector('b').style.textDecoration = 'line through'; 
+        alert("task performed");              
+        document.querySelector('b').style.display='none';
+        }, 30);
+      };
+    };                   
+    todoChecking(); 
+  </script>
+</body>
+</html>

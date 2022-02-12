@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myTodo</title>
+    <style>
+
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="myTodo">
+           <div class="inputvalue">
+               <input class="inputVal" type="text" placeholder="Add your text" value="hello">
+               <button class="btn"><b>+</b></button>
+           </div>
+
+           <div class="todoListItem">
+
+           </div>
+           <button class="clearTask" onclick="clearTask()">Clear all task</button>
+       </div>
+   </div>
+
+
+    <script>
+        const inputVal = document.getElementsByClassName("inputVal")[0]
+        const addTaskBtn = document.getElementsByClassName("btn")[0]
+        
+        addTaskBtn.addEventListener("click", ()=>{
+            let localItems = JSON.parse(localStorage.getItem('localItem'))
+            if(localItems === null){
+                taskList = []
+            } else {
+                taskList = localItems;
+            }
+            taskList.push(inputVal.value)
+            localStorage.setItem('localItem', JSON.stringify(taskList))
+            showList()
+        })
+        function showList(){
+            let outPut = '';
+            let taskListShow = document.querySelector(".todoListItem");
+            let localItems = JSON.parse(localStorage.getItem('localItem'));
+            if(localItems === null){
+                taskList = []
+            } else {
+                taskList = localItems;
+        }
+        taskList.forEach((data, index) => {
+            outPut +=
+            <div class="todoList">
+            <p class="ptext">movies tonight</p>
+                <button class='deleteTask' onClick="deleteItem($(index))">x</button>
+            </div>
+            
+        });
+        taskListShow.innerHTML = outPut;
+    }
+    </script>
+</body>
+</html>
