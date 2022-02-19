@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komlavi's Planning</title>
+    <style>
+       .footer {
+           display: flex;
+           width:100%;
+            border: 1px solid black;
+       }
+       .addClass {
+           margin-top: 2.5rem;
+       }
+       body {
+    text-align: center;
+    max-width: 500px;
+}
+form {
+    display: inline-block;
+}
+form .talkList {
+    width:100%;
+    border: 1px solid black;
+}
+    </style>
+</head>
+<body>
+    <section id="form">
+    <form action="">
+        <h1>Weekly Todos</h1>
+        <div class="talkList"><input type="checkbox"><label for="">Home</label><button>❌</button></div>
+        <div class="taskList"><input type="checkbox"><label for="">Work</label><button>❌</button></div>
+        <div class="taskList"><input type="checkbox"><label for="">Study</label><button>❌</button> </div>
+
+    
+    <footer>
+    <div class="footer">
+    <p>3 tasks left</p>
+    <button>All.</button>
+    <button>Active</button>
+    <button>Completed</button>
+    </div>
+    </footer>
+</form>
+<div class="addClass">
+<input type="text" id="addTasks"><button>+</button>
+</div>
+
+</section>
+<script src="main.js" type="module"></script>
+</body>
+</html>

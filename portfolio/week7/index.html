@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: auto;
+            padding: 10px 10px;
+            border: 1px solid black;
+            width: 700px;
+        }
+        h1, h2 {
+            color: brown;
+        }
+        p {
+            background-color: antiquewhite;
+            color: black;
+            border: 1px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <h1>AJAX</h1>
+    <h2>Definition</h2>
+    <p>Ajax is a technique that allows web pages to communicate asynchronously with a
+        server, and it dynamically updates web pages without reloading. This enables
+        data to be sent and received in the background, as well as portions of a page to be
+        updated in response to user events, while the rest of the program continues to
+        run. <br>
+        <p>AJAX is a developer's dream, because you can:</p>
+        <ul>
+            <li>Read data from a web server - after the page has loaded</li>
+            <li>Update a web page without reloading</li>
+            <li>Send data to a web server - in the web background</li>
+            <ul>
+                <h2>It uses a combination of:</h2>
+                <li>A browser buit-in XMLHttRequest object(to request data from a web server</li>
+                <li>JavaScript and HTML DOM(To display or use the data</li>
+            </ul>
+        </ul>
+        <h2>How Ajax Works</h2>
+        <ul>
+            <li>1- An event occurs in web page(The page is loade, a button is clicked)</li>
+            <li>2- An XMLHttpRequest object is ctreated by Javascript</li>
+            <li>3- The XMLHttpRequest object sends a request to web server</li>
+            <li>4- The server sends a process request</li>
+            <li>5- The server sends a response back to the web page</li>
+            <li>6- The response is read by JavaScript</li>
+            <li>7- Proper action (like page update) is performed by JavaScript </li>
+        </ul>
+        <h2><strong>Fetch</strong></h2>
+        <p><b>Modern Browsers</b></p> <br>
+        <p>Modern Browsers can use Fetch API instead of the XMLHttpRequest Object</p> 
+        <p>The fetch API interface allows web browser to make HTTP request to web servers</p>
+        <p>If you use the XMLHttpRequest Object, Fetch can do the same in a simpler way</p>
+        <p>fetch('https://example.com/data') <br>	
+            .then( // code that handles the response ) <br>
+            .catch( // code that runs if the server returns an error )
+        </p>  
+        <h2><strong>Response Interface</strong></h2>
+        <p>const url = 'https:example.com/data'; <br>
+            fetch(url) <br>
+            .then((response) => { <br>
+            if(response.ok) { <br>
+            return response;   <br>
+            } <br>
+            throw Error(response.statusText); <br>
+        })  <br>
+        .then( response => // do something with response )  <br>
+        .catch( error => console.log('There was an error!') )   <br>
+          
+        </p>
+        <h2>Some other properties of the Response object are:</h2>
+        <p> 
+            headers: A Headers object (see later section) containing any headers
+            associated with the response <br>
+            url:  A string containing the URL of response  <br>
+            redirected: A boolean value that specifies if the response is the result of a
+            redirect  <br>
+            type: A string value of “basic”, “cors”, “error” or “opaque”. A value of
+            “basic” is used for a response from the same domain. A value of “cors” means
+            the data was received from a valid cross-origin request from a different
+            domain. A value of “opaque” is used for a response received from “no-cors”
+            request from another domain, which means access to the data will be severely
+            restricted. A value of “error” is used when a network error occurs.</p>
+            <h2>JSON Responses</h2>
+            <p>JSON is probably the most common format for AJAX responses. The json()
+                method is used to deal with these by transforming a stream of JSON data into a
+                promise that resolves to a JavaScript object.
+                .</p> <br>
+                <h3>code example:</h3>
+                <p>fetch(url)
+                    .then( response => response.json() ); <br>
+                    <!-- transforms the JSON data into a JavaScript object -->
+                    .then( data => console.log(Object.entries(data)) ) <br>
+                    .catch( error => console.log('There was an error: ', error)) <br>
+                </p>  <br>
+                <p>My codes <a href="http://127.0.0.1:5502/portfolio/week7/ajax.html">Read this</a></p>
+                <br>
+                <h2>Question</h2>
+                <p>What is the best way to start using the model view control approch to start creating applications?</p>
+    </p>
+</body>
+</html>
+    
+</body>
+</html>
