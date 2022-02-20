@@ -10,7 +10,8 @@ let contentOptions = [
   {link: 'week3/index3.html', text: 'Week 3'},
   {link: 'week4/index.html', text: 'Week 4'},
   {link: 'week5/index.html', text: 'Week 5'},
-  {link: 'week6/index.html', text: 'Week 6'}
+  {link: 'week6/index.html', text: 'Week 6'},
+  {link: 'week7/index.html', text: 'Week 7'}
 ];
 
 for ( {link, text} of contentOptions){
