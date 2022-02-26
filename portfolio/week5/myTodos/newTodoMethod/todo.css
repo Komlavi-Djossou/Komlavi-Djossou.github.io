@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    border:1px solid black;
+    margin: 10px 10px;
+}
+.myList {
+    width: 100%;
+    background-color: beige;
+}
+
+
+form#add-task {
+    margin: 10px 10px;
+}
+
+div#taskLists {
+    border: 1px solid black;
+    width: 60%;
+    margin-left: 5rem;
+    padding-left: 10rem;
+}
+td {
+    width: 50%;
+}
+
+.theButtons {
+    border: 1px solid black;
+    background:antiquewhite;
+    color:#312f2f;
+}
+button {
+    padding: 1em;
+    color: #453c3c;
+}
+
+
