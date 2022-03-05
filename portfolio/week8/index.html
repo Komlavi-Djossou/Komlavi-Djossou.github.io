@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: auto;
+            padding: 10px 10px;
+            border: 1px solid black;
+            width: 700px;
+        }
+        h1, h2 {
+            color: brown;
+        }
+        p {
+            background-color: antiquewhite;
+            color: black;
+            border: 1px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <h1> <a href="">Click Here for codes examples</a> <br>
+         TRANSITION</h1>
+    <h2>Definition</h2>
+    <p>CSS transitions allows you to change property values smoothly, over a given duration. <br>
+        Some properties of css transitions are: <br>
+            <li> transition</li>
+            <li>transition-delay</li>
+            <li>transition-duration</li>
+            <li>transition-timing-function</li>
+
+        <p>How to Use CSS Transitions? <br>
+        To create a transition effect, you must specify two things:</p>
+        <ul>
+            <li>the CSS property you want to add an effect to</li>
+            <li>the duration of the effect</li>
+            <li>Note: If the duration part is not specified, the transition will have no effect, because the default value is 0</li>
+            <ul>
+                <h2>The transition-timing-function property specifies 
+                    the speed curve of the transition effect.
+                    The transition-timing-function property can have
+                     the following values:</h2>
+                <li>ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)</li>
+                <li>linear - specifies a transition effect with the same speed from start to end</li>
+                <li>ease-in - specifies a transition effect with a slow start and end</li>
+                <li>cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+                </li>
+            </ul>
+        </ul>
+        <h2>Delay the Transition Effect</h2>
+        <p>The transition-delay property specifies a delay (in seconds) for the transition effect.</p>
+
+        <h1>TRANSFORMS</h1>
+    <h2>Definition</h2>
+    <p>The transform property applies a 2D or 3D transformation to an element. 
+        This property allows you to rotate, scale, move, skew, etc., elements.</p> <br>
+           
+            <li> rotate(angle):	Defines a 2D rotation, the angle is specified in the parameter/li>
+            <li>skewY(angle): Defines a 2D skew transformation along the Y-axis</li>
+            <li>scaleY(y)	Defines a scale transformation by giving a value for the Y-axis</li>
+            <li>ranslateX(x): Defines a translation, using only the value for the X-axis</li>
+        <h2><strong>Some other properties of transforms:</strong></h2>
+        <p>
+            none	Defines that there should be no transformation	
+            matrix(n,n,n,n,n,n)	Defines a 2D transformation, using a matrix of six values	
+            matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)	Defines a 3D transformation, using a 4x4 matrix of 16 values	
+            <br>  translate(x,y)	Defines a 2D translation	
+            translate3d(x,y,z)	Defines a 3D translation	<br>
+            translateX(x)	Defines a translation, using only the value for the X-axis	<br>
+            translateY(y)	Defines a translation, using only the value for the Y-axis	<br>
+            translateZ(z)	Defines a 3D translation, using only the value for the Z-axis	<br>
+            scale(x,y)	Defines a 2D scale transformation	<br>
+            scale3d(x,y,z)	Defines a 3D scale transformation	<br>
+            scaleX(x)	Defines a scale transformation by giving a value for the X-axis	<br>
+            scaleY(y)	Defines a scale transformation by giving a value for the Y-axis	<br>
+            scaleZ(z)	Defines a 3D scale transformation by giving a value for the Z-axis	<br>
+            rotate(angle)	Defines a 2D rotation, the angle is specified in the parameter	<br>
+            rotate3d(x,y,z,angle)	Defines a 3D rotation	<br>
+            rotateX(angle)	Defines a 3D rotation along the X-axis	<br>
+            rotateY(angle)	Defines a 3D rotation along the Y-axis	<br>
+            rotateZ(angle)	Defines a 3D rotation along the Z-axis	<br>
+            skew(x-angle,y-angle)	Defines a 2D skew transformation along the X- and the Y-axis	<br>
+            skewX(angle)	Defines a 2D skew transformation along the X-axis	<br>
+            skewY(angle)	Defines a 2D skew transformation along the Y-axis	<br>
+            perspective(n)	Defines a perspective view for a 3D transformed element	<br>
+            initial	Sets this property to its default value. Read about initial	<br>
+            inherit	Inherits this property from its parent element. Read about inherit  <br>
+        </p>
+        <h2>Canvas: <br> <p>A canvas is a rectangular area on an HTML page. 
+            By default, a canvas has no border and no content.</p></h2>
+        <p> 
+            The HTML canvas element is used to draw graphics, on the fly, via JavaScript.The canvas 
+            element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+         Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
+                </p>
+            <h2>HTML SVG Graphics</h2>
+            <h3>Definition:</h3>
+            <p>SVG defines vector-based graphics in XML format.</p>
+            <p>What is SVG? <br>
+                SVG stands for Scalable Vector Graphics <br>
+                SVG is used to define graphics for the Web <br>
+                SVG is a W3C recommendation</p> <br>
+                <h3>Canvas and SVG</h3>
+                <p>Differences Between SVG and Canvas
+                   <br> SVG is a language for describing 2D graphics in XML.
+                  <br>  Canvas draws 2D graphics, on the fly (with a JavaScript).
+                   <br>  SVG is XML based, which means that every element is available within the SVG DOM. You can attach JavaScript event handlers for an element.
+                    <br> In SVG, each drawn shape is remembered as an object. If attributes of an SVG object are changed, the browser can automatically re-render the shape.
+                    Canvas is rendered pixel by pixel. In canvas, once the graphic is drawn, it is forgotten by the browser. If its position should be changed, the entire scene needs to be redrawn, including any objects that might have been covered by the graphic.
+                </p>  <br>
+                <h1>Drag and Drop</h1>
+                <p>Drag and drop is a very common feature. It is when you "grab" an object and drag it to a different location.</p>
+                <br>
+                <p>Make an Element Draggable
+                    First of all: To make an element draggable, set the draggable attribute to true: 
+                    img draggable="true" </p> <br>
+                    <h3>What to Drag: ondragstart and setData()</h3>
+                    <p>Then, specify what should happen when the element is dragged.
+                        In the example above, the ondragstart attribute calls
+                        a function, drag(event), 
+                        that specifies what data to be dragged.</p>
+                        <h3>Where to Drop - ondragover</h3>
+                        <p>The ondragover event specifies where the dragged data can be dropped.
+
+                            By default, data/elements cannot be dropped in other elements. To allow a drop, we must
+                             prevent the default handling of the element.</p>
+                        <h3>Do the Drop - ondrop</h3>
+                        <p>When the dragged data is dropped, a drop event occurs.</p>
+                <h2>Question</h2>
+                <p>When should you use SVG files? and on what project could think of using svg methods?</p>
+                <p>hat are the disadvantages of SVG? and do I need to know about them?</p>
+    </p>
+</body>
+</html>
+    
+</body>
+</html>

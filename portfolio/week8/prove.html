@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* example   1 */
+        /* change only the width */
+        /* div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: width 2s, add the height height 4s;
+    } */
+        /* div:hover { */
+        /* width: 300px; */
+        /* add height; */
+        /* height: 300px;
+        } */
+
+        /* example 2  transition-timing-function */
+        /* div{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            color: white;
+            transition: width 2s;
+        }
+        #div1 {
+            transition-timing-function: linear;
+        }
+        #div2 {
+            transition-timing-function: ease;
+        }
+        #div3 {
+            transition-timing-function: ease-in;
+        }
+        #div4 {
+            transition-timing-function: ease-out;
+        }
+        #div5 {
+            transition-timing-function: ease-in-out;
+        }
+
+        div:hover {
+            width: 300px;
+        } */
+
+        /* transition delay  */
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: beige;
+            transition: width 3s;
+            transition-delay: 1s;
+        }
+        div:hover {
+            width: 300px;
+        }
+
+          /* transform       */
+        div.a {
+        width: 150px;
+        height: 80px;
+        background-color: rgb(221, 221, 205);
+        -ms-transform: rotate(20deg); 
+        transform: rotate(20deg);
+        }
+
+        div.b {
+        width: 150px;
+        height: 80px;
+        background-color: rgb(28, 141, 56);
+        -ms-transform: skewY(20deg); 
+        transform: skewY(20deg);
+        }
+
+        div.c {
+        width: 150px;
+        height: 80px;
+        background-color: rgb(128, 128, 103);
+        -ms-transform: scaleY(1.5); 
+        transform: scaleY(1.5);
+        }
+        .doubleTrans {
+            width: 100px;
+            height: 100px;
+            background: rebeccapurple;
+            transition: width 2s, height 2s, transform 2s ;
+        }
+        .doubleTrans:hover {
+            width: 300px;
+            height: 300px;
+            transform: rotate(180deg);
+        }
+        #myCanvas{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <div>
+        <p>Hover over me</p>
+    </div> -->
+
+     <!-- example 2 transition-timing-function  -->
+    <!-- <div id="div1">linear</div><br>
+    <div id="div2">ease</div><br>
+    <div id="div3">ease-in</div><br>
+    <div id="div4">ease-out</div><br>
+    <div id="div5">ease-in-out</div><br> -->
+
+    <!-- example 3: transition-delay   -->
+    <div class="delay">
+        <p>I will delay</p>
+    </div>
+
+    <section class="transform">
+        <h1>The transform Property</h1>
+
+        <h2>transform: rotate(20deg):</h2>
+        <div class="a">Hello World!</div>
+        <br>
+
+        <h2>transform: skewY(20deg):</h2>
+        <div class="b">Hello World!</div>
+        <br>
+
+        <h2>transform: scaleY(1.5):</h2>
+        <div class="c">Hello World!</div>
+            </section>
+            
+            <section class="transTransition">
+                <h1>Transition + Transform</h1>
+
+                <p>Hover over the div element below:</p>
+
+                <div class="doubleTrans"></div>
+            </section>
+
+            <section>
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+                    Try canvas.</canvas>
+            </section>
+            <section>
+                <svg width="400" height="180">
+                    <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+                    style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+                  Sorry, your browser does not support inline SVG.
+                  </svg>
+                  
+            </section>
+            <section>
+                <p>Drag the W3Schools image into the rectangle:</p>
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <br>
+                <img id="drag1" src="#" draggable="true" ondragstart="drag(event)" width="336" height="69">
+            </section>
+ 
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.moveTo(0,0);
+                ctx.lineTo(200,50);
+                ctx.stroke();
+
+                // drag and drop 
+                function allowDrop(ev) {
+                ev.preventDefault();
+                }
+
+                function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+                }
+
+                function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+                }
+            </script>
+</body>
+</html>
