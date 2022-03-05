@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+      margin: 160px;
+      text-align: justify;
+  }
+    </style>
+</head>
+<body>
+    <h1>The Window Object</h1>
+<h2>The closed Property</h2>
+
+<p><button onclick="openWin()">Open "myWindow"</button></p>
+<p><button onclick="closeWin()">Close "myWindow"</button></p>
+<p><button onclick="checkWin()">Is "myWindow" closed?</button></p>
+
+<div id="tryIt"></div>
+<!-- localStorage  -->
+<p id="name"></p>
+
+<!-- APIS  -->
+<section>
+<button class="highlight-button-1">Highlight</button>
+  <h1>Syntax Highlighting</h1>
+  <p class="highlight-para1" data-color="green">Lorem ipsum dolor
+      sit amet, consectetur adipiscing elit. Fusce consectetur laoreet dui 
+      ac scelerisque.</p>
+  <p class="highlight-para2" data-color="red">Lorem ipsum dolor sit amet, 
+    consectetur adipiscing elit. Fusce consectetur laoreet dui ac scelerisque.</p>
+    </section>
+
+<script>
+let myWindow;
+
+function openWin() {
+  myWindow = window.open("", "myWindow", "width=400,height=200");
+}
+
+function closeWin() {
+  if (myWindow) {
+    myWindow.close();
+  }
+}
+
+function checkWin() {
+let text = "";
+if (!myWindow) {
+  text = "It has never been opened!";
+} else {
+  if (myWindow.closed) { 
+    text = "It is closed.";
+  } else {
+    text = "It is open.";
+  }
+}
+document.getElementById("tryIt").innerHTML = text;
+}
+
+// localStorage 
+sessionStorage.setItem("lastname", "Komlavi");
+let personName = sessionStorage.getItem("lastname");
+document.getElementById("name").innerHTML = personName;
+
+// API 
+var para = document.querySelectorAll('[class^=highlight-]')
+var btn = document.querySelectorAll('[class^=highlight-button-]')
+btn[0].onclick = function(){ highlight();}
+function highlight(){
+    for(var i=0; i<para.length;i+=1){
+        var highlightColour = para[i].getAttribute('data-color');
+        para[i].style.color=highlightColour;
+    }
+}
+
+</script>
+</body>
+</html>
