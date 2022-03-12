@@ -5,7 +5,7 @@ body {
 }
 
 h1{
-  background-color: rgb(212, 197, 178);
+  background-color:  rgb(229 137 20);
   padding: 1em;
 }
 ol#assignments {
@@ -16,7 +16,27 @@ color: black;
 }
 a:hover {
 color: coral;
-cursor: all-scroll;
+cursor: pointer;
+}
+body {
+  font-size: 20px;
+  font-family: "kalam", cursive;
+  padding: 10px 10px;
+}
+
+h1{
+  background-color:  rgb(229 137 20);
+  padding: 1em;
+}
+ol#assignments {
+text-align: center;
+}
+a {
+color: black;
+}
+a:hover {
+color: coral;
+cursor: pointer;
 }
 li {
 width: 70%;
@@ -29,9 +49,102 @@ margin-bottom: 2em;
 border: 5px solid #ccc;
 }
 footer{
-  background-color:  rgb(212, 197, 178);
+  background-color: rgb(229 137 20);
   text-align: center;
 
 }
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: #897676;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+
+li {
+width: 70%;
+font-size: 1.25em;
+font-weight: 700;
+text-align: center;
+padding: 1em 2em;
+font-style: italic;
+margin-bottom: 2em;
+border: 5px solid #ccc;
+}
+footer{
+  background-color: rgb(229 137 20);
+  text-align: center;
+
+}
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: #897676;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+
 
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+  font: 1em sans-serif;
+  max-width: 320px;
+}
+p > label {
+  display: block;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+fieldset {
+  width : 100%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  box-shadow: none;
+}
+</style>
+</head>
+<body>
+    <form>
+        <p>
+            <fieldset>
+                <legend>
+                    Do you have a credit card?
+                    <abbr title="This field is mandatory" aria-label="required">*</abbr>
+                </legend>
+                <input type="radio" required name="card" id="r1" value="yes"><label for="r1">Yes</label>
+                <input type="radio" required name="card" id="r2" value="no"><label for="r2">No</label>
+            </fieldset>
+        </p>
+        <p>
+            <label for="n1">How old are you?</label>
+            <input type="number" min="12"  max="120" step="1" id="n1" name="age" pattern="\d+">
+        </p>
+        <p>
+            <label for="t1">What is your favorite book? <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+             <input type="text" id="t1" name="book" list="l1" required 
+            pattern="[Ss]cience|[Ee]nglish|[Rr]eligion|[Mm]athematics|[Ss]ocial Studies">
+            <datalist id="l1">
+                <option>Science</option>
+                <option>English</option>
+                <option>Religion</option>
+                <option>Mathematics</option>
+                <option>Social Studies</option>
+
+            </datalist>
+            <p>
+                <label for="t2">What is your e-mail address?</label>
+                <input type="email" id="t2" name="email">
+            </p>
+            <p>
+                <label for="t3">Leave a short message</label>
+                <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+              </p>
+            <p>
+                <button>Submit</button>
+            </p>
+        </p>
+ </form>
+    
+</body>
+</html>

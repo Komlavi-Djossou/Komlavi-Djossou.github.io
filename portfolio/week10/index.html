@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-style: oblique;
+            font-weight: 200;
+            margin: auto;
+            padding: 10px 10px;
+            border: 1px solid black;
+            width: 700px;
+            line-height: 1.5rem;
+        }
+        h1, h2 {
+            padding: 10px;
+            color: brown;
+            width: 500px;
+            height: 50px;
+            background: rgb(234, 229, 238);
+            transition: width 2s;
+        }
+        h1:hover, h2:hover {
+            width: 100%;
+        } 
+        p {
+            background-color: antiquewhite;
+            color: black;
+            border: 1px dashed black;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><strong><a href="https://komlavi-djossou.github.io/portfolio/week10/prove.html">Click Here for codes examples 1</a></strong></li>
+        <li><strong><a href="https://komlavi-djossou.github.io/portfolio/week10/validate.html">Click Here for codes examples 2</a></strong></li> 
+        <li><strong><a href="https://komlavi-djossou.github.io/portfolio/week10/bookForm.html">Click Here for codes examples 3</a></strong></li>
+    </ul>
+        <h1>Validating forms</h1>
+    <h2>Definition</h2>
+    <p>When you go to any popular site with a registration form, and you will notice that 
+        they provide feedback when you don't enter your data in the format 
+        they are expecting. You'll get messages such as:</p>
+        <ul>
+            <li>"This field is required" (You can't leave this field blank).</li>
+            <li>"Please enter your phone number in the format xxx-xxxx" (A specific 
+                data format is required for it to be considered valid).</li>
+            <li>"Please enter a valid email address" (the data you entered is not in the right format).</li>
+            <li>"Your password needs to be between 8 and 30 characters long and contain one uppercase letter, one symbol, and a number." 
+                (A very specific data format is required for your data)</li>
+            <li>"Your password needs to be between 8 and 30 characters long and contain one uppercase letter, one symbol, and a number."
+                 (A very specific data format is required for your data).</li>
+        </ul>
+        <p>This is called form validation. When you enter data, the browser and/or the web
+             server will check to see that the data is in the correct format and within the
+              constraints set by the application. Validation done in the browser is called 
+              client-side validation, while validation done on the server is 
+            called server-side validation. In this chapter we are focusing on client-side validation.</p>
+        <h2>Different types of client-side validation</h2>
+        <ul>
+            <li>Built-in form validation uses HTML5 form validation features,
+                 which we've discussed in many places throughout this module. 
+                 This validation generally doesn't require much JavaScript. 
+                 Built-in form validation has better performance than JavaScript,
+                  but it is not as customizable as JavaScript validation.
+            </li>
+            <li>JavaScript validation is coded using JavaScript. 
+                This validation is completely customizable, 
+                but you need to create it all (or use a library).</li>
+        </ul>
+    
+        <h3>Validating against a regular expression</h3>
+        <p>Another useful validation feature is the pattern attribute, 
+            which expects a Regular Expression as its value. A regular
+             expression (regex) is a pattern that can be used to match 
+             character combinations in text strings, so regexps are ideal
+              for form validation and serve a variety of other uses in JavaScript.</p>
+              <p>Below are some examples to give you a basic idea of how they work.</p>
+              <ul>
+                  <li>ab?c—Matches a, optionally followed by a single b, followed by c. ( ac or abc)</li>
+                  <li>a — Matches one character that is a (not b, not aa, and so on).</li>
+                  <li>abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so on)</li>
+              </ul>
+
+            <h3>HTML step Attribute</h3>
+            <p>
+                The step attribute specifies the interval between legal numbers in an input element.  <br>
+                Example: if step="3", legal numbers could be -3, 0, 3, 6, etc.  <br>
+                Tip: The step attribute can be used together with the max and min attributes to create a range of legal values.
+            </p>
+            <h3>The Constraint Validation API</h3>
+            <p>the Constraint Validation API, which consists of a set of methods and properties
+                 available on the following form element DOM interfaces:</p><br>
+
+                 <p>
+                    HTMLButtonElement represents a button element <br>
+                        HTMLFieldSetElement represents a fieldset element <br>
+                        HTMLInputElement (represents an input element)  <br>
+                        HTMLOutputElement (represents an output element)  <br>
+                        HTMLSelectElement (represents a select element)  <br>
+                        HTMLTextAreaElement (represents a textarea element)
+                 </p>
+                 <p>
+                    The Constraint Validation API also makes the following 
+                    methods available on the above elements and the form element.
+                 </p> <br>
+                 checkValidity(): Returns true if the element's value has no
+                  validity problems; false otherwise. If the element is invalid, 
+                  this method also fires an invalid event on the element. <br>
+                reportValidity(): Reports invalid field(s) using events.
+                Useful in combination with preventDefault() 
+                in an onSubmit event handler <br>
+                setCustomValidity(message): Adds a custom error message to the element; 
+                if you set a custom error message, the element is considered to be invalid, 
+                and the specified error is displayed. This lets you use JavaScript code to establish
+                a validation failure other than those offered by the standard HTML5 validation constraints.
+                The message is shown to the user when reporting the problem. <br>
+                <h1>Using the Fetch API</h1>
+                 <h4>Definition</h4>
+                 <p>
+                    The Fetch API provides a JavaScript interface for accessing and 
+                    manipulating parts of the HTTP pipeline, such as requests and responses. 
+                    It also provides a global fetch() method that provides an easy, 
+                    logical way to fetch resources asynchronously across the network. <br>
+                    The fetch() method in JavaScript is used to request to the server and 
+                    load the information in the webpages. The request can be of any APIs
+                     that returns the data of the format JSON or XML. 
+                    This method returns a promise. <br>
+                 </p>
+                 <p>
+                    Syntax: <br>
+                    fetch( url, options )  <br>
+                    Parameters: This method accept two parameters as mentioned above and described below: <br>
+
+                    URL: It is the URL to which the request is to be made.  <br>
+                    Options: It is an array of properties. It is an optional parameter.  <br>
+                    Return Value: It returns a promises whether it is resolved or not. The return data can be of the format JSON or XML.  <br>
+                    It can be the array of objects or simply a single object.  <br>
+                 </p>
+                 <h3>JavaScript Async</h3>
+                  "async and await make promises easier to write"  <br>
+                  async makes a function return a Promise  <br>
+                  await makes a function wait for a Promise <br>
+                  <ul>
+                      <li><strong><a href="https://komlavi-djossou.github.io/portfolio/week10/fetch.html">Click Here for codes examples</a></strong></li>
+                      <li><strong><a href="https://komlavi-djossou.github.io/portfolio/week10/fetchapi.html">Click Here for codes examples</a></strong></li>
+                  </ul>
+</body>
+</html>
+    
+</body>
+</html>
