@@ -1,0 +1,15 @@
+@media screen and (min-width: 900px){
+	header img {
+		width: 120px;
+	}
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		display: block;
+		flex: 1 1 auto;
+	}
+	nav ul li:first-child {
+		display: none;
+	}
+}
