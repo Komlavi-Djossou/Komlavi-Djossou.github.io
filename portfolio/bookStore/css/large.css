@@ -1,15 +1,45 @@
 @media screen and (min-width: 900px){
-	header img {
-		width: 120px;
+	body {
+		padding: 15px 15px;
 	}
-	nav ul {
-		display: flex;
+	.logo img {
+		width: 200px;
+		margin: 10px auto;
+		text-align: center;
 	}
-	nav ul li {
-		display: block;
-		flex: 1 1 auto;
+	.navbar {
+		width: 100%;
+		background-color: #555;
+		overflow: auto;
+	  }
+	  
+	  .navbar a {
+		float: left;
+		padding: 12px;
+		color: white;
+		text-decoration: none;
+		font-size: 17px;
+	  }
+	  
+	  .navbar a:hover {
+		background-color: #000;
+	  }
+	  
+	  .active {
+		background-color:  #a47cae;
+	  }
+	  .headings {
+		  display: grid;
+		  grid-template-columns: 1fr 1fr;
+	  }
+	  div#output {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 1rem;
+		background: rgba(0, 0, 0, 0.6);
+		color: white;
 	}
-	nav ul li:first-child {
-		display: none;
-	}
+	  
+	
+	
 }

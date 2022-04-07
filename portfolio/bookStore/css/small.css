@@ -18,78 +18,117 @@ body {
     background-color: var(--primary);
     line-height: 1.4;
     border: 1px var(--secondary);
+    margin: 10px;
+}
+main {
+    margin: 5em auto;
+    border: 1px solid white;
+    padding: 2rem;
 }
 
- /* -----LOGO------  */
- .logo {
-    max-width: 100px;
+/* -----LOGO------  */
+.logo img {
     width: 50%;
- }
-
+    margin: 10px auto;
+    display: block;
+    border-radius: 35%;
+    padding: 5px;
+}
+.logo h2 {
+    margin: 10px auto;
+    text-align: center;	
+}
+/* welcome */
+.welcome {
+    border-bottom: 1px solid black;
+    box-shadow: white;
+	margin: 10px auto;
+	text-align: center;
+    font-weight:800;
+    font-style:oblique;
+}
+.weather {
+    color: white;
+    background:  #00000099;
+    border: 1px solid #a9c08e;
+    padding: .5rem;
+    border-radius: 20px;
+    width: 50%;
+    box-shadow: 0 0 25px rgb(147, 166, 187), 0 0 5px darkblue;
+}
+    
  /* menu *    and / 
   /* ------ navBar ------  */
-  nav {
-    border-radius: 10px;
-    background-color: whitesmoke;
-    font-family: Lora;
-}
+  .navbar a {
+    float: none;
+    display: block;
+  }
 
-nav ul {
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    margin-top: 1rem;
+/* Books Info */
+ul li {
+    margin: 10px;
+    background: white;
+    border: 1px solid black;
+    padding: 0.5em;
+    list-style: none;
    
 }
-nav ul li:first-child {
-    display: block;
-}
-
-nav ul li {
-    display: none;
-}
-
-nav ul li a {
-    display: block;
+ul li a#readBtn {
+    padding: 0.3em;
     text-decoration: none;
-    padding: 0.8rem;
-    text-align: center;
-    color: var(--dark);
-    font-size: 1.1rem;
-    box-shadow: var(--accent1);
+    background: #00000099;
+    color: white;
+    margin: 0.5em;
+    
+}
+ul li a#saveBtn {
+    padding: 0.3em;
+    text-decoration: none;
+    background: #a47cae;
+    color: white;
+     margin: 0.5em;
+    
+}
+ul li a#buyBtn {
+    padding: 0.3em;
+    text-decoration: none;
+    background: #00000099;
+    color: white;
+     margin: 0.5em;
+    
+}
+/* INPUT, BUTTON   */
+button {
+    color: white;
+    background: #746a66;
+    border: 1px solid #dce032;
+    padding: .5rem;
+    border-radius: 20px;
+    width: 30%;
+    box-shadow: 0 0 25px rgb(147, 166, 187), 0 0 5px darkblue;
+}
+input{
+     color: black;
+    border: 1px solid #dce032;
+    padding: .5rem;
+    border-radius: 50px;
+    width: 30%;
+    box-shadow: 0 0 25px rgb(147, 166, 187), 0 0 5px darkblue;
+    margin: 0.9rem;
+}
+div#output {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
 }
 
-nav ul li:hover{
-    background-color: white;
-    transition: 0.9s;
-    color: var(--dark);
-    border-radius: 10px;
-}
- 
-.active {
-	pointer-events: none;
-} 
-.menu {
-    color: var(--secondary);
-    background-color: var(--primary);
-}    
-.menu:hover{
-    color: var(--secondary);
-    background-color: var(--dark);
-}
-.open::after{
-    content: " Menu";
-}
-.close::after{
-    content: " Close";
-}
-.responsive li {
-	display: block;
-}
 
 
 
-/* ----FOOTER--- */
+
+  /* ----FOOTER--- */
 footer {
     height: 300px;
     display: flex;
@@ -111,7 +150,7 @@ footer p:nth-child(1){
 footer p:nth-child(2){
     font-size: 16px;
     color: va(--dark);
-    width: 600px;
+    width: 50%;
     text-align: center;
 }
 .social-icons a{
@@ -123,6 +162,7 @@ footer p:nth-child(2){
     background-color: #e6e3e3;
     margin: 20px 10px;
     border-radius: 50%;
+    list-style: none;
 
 }
 .social-icons{
@@ -174,3 +214,4 @@ footer p:nth-child(2){
     font-size: 20px;
     color: #2b2b2b;
 }
+

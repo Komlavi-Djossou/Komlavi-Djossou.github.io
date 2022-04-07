@@ -1,4 +1,4 @@
-export function openClose(){
+function openClose(){
     const mainnav = document.querySelector('.nonResponsive');
     const menup = document.querySelector('.open');
     
